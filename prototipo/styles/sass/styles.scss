@@ -1,14 +1,36 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$p-font-size: 10px;
+$p-line-height: 1.5;
+$p-font-family: 'Roboto', sans-serif;
+$p-font-weight: 100;
+
+//box
+
+$margin: 5px;
+$padding: 5px;
+
+//colors
 
 //mobile
 
 body {
-  background-color: blue;
+  font-size: $p-font-size;
+  line-height: $p-line-height;
+  font-family: $p-font-family;
+  font-weight: $p-font-weight;
+
+  margin: 0;
+  padding: 0;
 }
 
 //tablet
 
 @media screen and (min-width: 768px) {
   body {
+    font-size: $p-font-size * 1.2;
+    font-weight: $p-font-weight * 2;
   }
 }
 
@@ -16,5 +38,7 @@ body {
 
 @media screen and (min-width: 992px) {
   body {
+    font-size: $p-font-size * 1.4;
+    font-weight: $p-font-weight * 3;
   }
 }

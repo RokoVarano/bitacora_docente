@@ -120,24 +120,10 @@ body {
   }
 }
 
-//mobile
-
-@media screen and (min-width: 400px) {
-  :root {
-    font-size: $p-font-size * 2;
-  }
-}
-
-//tablet
-
-@media screen and (min-width: 768px) {
-  :root {
-    font-size: $p-font-size * 2;
-  }
-}
-
 //desktop
 
-@media screen and (min-width: 992px) {
-
+@media screen and (min-height: 720px) {
+  :root {
+    font-size: $p-font-size * 2;
+  }
 }

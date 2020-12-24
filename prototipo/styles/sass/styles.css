@@ -126,13 +126,7 @@ body main .seccion-1 .formulario .boton-submit {
   width: 100%;
 }
 
-@media screen and (min-width: 400px) {
-  :root {
-    font-size: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-height: 720px) {
   :root {
     font-size: 30px;
   }

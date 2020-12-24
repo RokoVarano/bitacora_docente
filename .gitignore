@@ -4,3 +4,9 @@
 *.scss.map
 
 node_modules/
+
+hint-report/
+
+.stylelintrc.json
+
+prototipo/.hintrc

@@ -1,24 +1,140 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-body {
-  font-size: 10px;
+.caja-azul {
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+:root {
+  font-size: 15px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  margin: 0;
-  padding: 0;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 12px;
-    font-weight: 200;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 80%;
+  height: 100%;
+}
+
+body main .seccion-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  height: 100%;
+  margin: 5% 0;
+}
+
+body main .seccion-1 .titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40%;
+  width: 100%;
+}
+
+body main .seccion-1 .spacer {
+  height: 5%;
+}
+
+body main .seccion-1 .formulario {
+  height: 55%;
+  width: 100%;
+}
+
+body main .seccion-1 .formulario .campo {
+  height: 33%;
+}
+
+body main .seccion-1 .formulario .boton-submit {
+  height: 33%;
+  width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+  :root {
+    font-size: 30px;
   }
 }
 
-@media screen and (min-width: 992px) {
-  body {
-    font-size: 14px;
-    font-weight: 300;
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

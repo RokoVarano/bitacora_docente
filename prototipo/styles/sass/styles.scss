@@ -21,7 +21,7 @@ $blanco: white;
   background: $azul;
   color: $blanco;
   text-align: center;
-  padding: $padding * 3;
+  padding: $padding;
 }
 
 //mobile
@@ -120,7 +120,11 @@ body {
 
         .campo {
           height: 30%;
-          justify-content: space-around;
+          justify-content: center;
+
+          input {
+            height: 100%;
+          }
         }
 
         .boton-submit {

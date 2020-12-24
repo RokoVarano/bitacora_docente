@@ -3,7 +3,7 @@
   background: blue;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 5px;
 }
 
 :root {
@@ -101,8 +101,13 @@ body main .seccion-1 .formulario {
 
 body main .seccion-1 .formulario .campo {
   height: 30%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .seccion-1 .formulario .campo input {
+  height: 100%;
 }
 
 body main .seccion-1 .formulario .boton-submit {

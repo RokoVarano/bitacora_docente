@@ -101,8 +101,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
-  min-height: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 80vh;
+  min-height: 80vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -120,8 +123,9 @@ body main {
 body main section {
   height: 100%;
   margin: 5% 0;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body main section .login-titulo {
@@ -173,6 +177,38 @@ body main section .form-botones .boton-submit {
   width: 45%;
 }
 
+body main .menu-section {
+  height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main .menu-section .menu-buscar {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main .menu-section .menu-buscar .item {
+  margin-bottom: 15px;
+}
+
+body main .menu-section .menu-botones {
+  height: 10%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .menu-section .menu-botones button {
+  width: 45%;
+}
+
 @media screen and (min-height: 768px) {
   :root {
     font-size: 30px;
@@ -180,9 +216,6 @@ body main section .form-botones .boton-submit {
 }
 
 @media screen and (min-width: 996px) {
-  :root {
-    font-size: 30px;
-  }
   body {
     max-height: 100vh;
     min-height: 100vh;

@@ -129,8 +129,9 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  min-height: 100vw;
+  align-items: center;
+  max-height: 80vh;
+  min-height: 80vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -146,7 +147,7 @@ body {
     section {
       height: 100%;
       margin: 5% 0;
-      justify-content: space-around;
+      justify-content: space-between;
 
       //login
 
@@ -190,6 +191,31 @@ body {
         }
       }
     }
+
+    //menu
+
+    .menu-section {
+      height: auto;
+      justify-content: flex-start;
+
+      .menu-buscar {
+        justify-content: flex-start;
+
+        .item {
+          margin-bottom: $margin *3;
+        }
+      }
+
+      .menu-botones {
+        height: 10%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        button {
+          width: 45%;
+        }
+      }
+    }
   }
 }
 
@@ -202,10 +228,6 @@ body {
 }
 
 @media screen and (min-width: 996px) {
-  :root {
-    font-size: $p-font-size * 2;
-  }
-
   body {
     max-height: 100vh;
     min-height: 100vh;
@@ -216,10 +238,6 @@ body {
       section {
         padding: $padding * 3;
         border: 2px $azul solid;
-
-        //formulario
-
-
       }
     }
   }

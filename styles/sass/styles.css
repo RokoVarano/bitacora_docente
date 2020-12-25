@@ -1,28 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-.caja-azul {
-  background: blue;
-  color: white;
-  text-align: center;
-  padding: 5px;
-}
-
-.caja-blanca {
-  background: white;
-  color: blue;
-  text-align: center;
-  padding: 5px;
-  border: 2px blue solid;
-}
-
-.caja-amarilla {
-  background: gold;
-  color: black;
-  text-align: center;
-  padding: 5px;
-  border: 5px black solid;
-  border-radius: 50px;
-}
-
 :root {
   font-size: 15px;
   line-height: 1.5;
@@ -77,7 +53,7 @@ h6 {
   font-size: 1rem;
 }
 
-div, main, section, form {
+div, main, section, form, .caja-amarilla {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +62,33 @@ div, main, section, form {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+}
+
+.caja-azul {
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.caja-blanca {
+  background: white;
+  color: blue;
+  text-align: center;
+  padding: 5px;
+  border: 2px blue solid;
+}
+
+.caja-amarilla {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: gold;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border: 5px black solid;
+  border-radius: 50px;
 }
 
 .spacer {
@@ -149,7 +152,7 @@ body main section .login-formulario .campo {
           justify-content: center;
 }
 
-body main section .login-formulario .boton-submit {
+body main section .login-formulario .submit {
   height: 30%;
   width: 100%;
 }
@@ -205,7 +208,7 @@ body main .menu-section .menu-botones {
           justify-content: space-between;
 }
 
-body main .menu-section .menu-botones button {
+body main .menu-section .menu-botones a {
   width: 45%;
 }
 

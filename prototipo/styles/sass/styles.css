@@ -56,6 +56,10 @@ div, main, section, form {
           flex-direction: column;
 }
 
+.spacer {
+  height: 5%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -77,6 +81,9 @@ body main .seccion-1 {
   width: 100%;
   height: 100%;
   margin: 5% 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body main .seccion-1 .titulo {
@@ -87,12 +94,8 @@ body main .seccion-1 .titulo {
   width: 100%;
 }
 
-body main .seccion-1 .spacer {
-  height: 2%;
-}
-
 body main .seccion-1 .formulario {
-  height: 58%;
+  height: 55%;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;

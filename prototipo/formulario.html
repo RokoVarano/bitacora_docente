@@ -10,24 +10,24 @@
   <body>
     <main>
       <section>
-        <div class='login-titulo caja-azul'>
-          <h1>Bitacora Docente</h1>
-          <h5>Prototipo</h5>
+        <div class="form-nombre caja-blanca">
+          <p>23 Noviembre - 2020</p>
+          <p>Dr. Jhon Doe</p>
         </div>
-        <form class="login-formulario" action="/action_page.php" method="get">
-          <div class="campo">
-            <label class="caja-azul" for="usuario">Usuario</label>
-            <input type="text" id="usuario" name="usuario" title="Usuario" placeholder="Usuario">
-          </div>
-          <div class="campo">
-            <label class="caja-azul" for="clave">Clave</label>
-            <input type="text" id="clave" name="clave" title="Clave" placeholder="Clave">   
-          </div>
-          <button  class="boton-submit caja-amarilla" type="button"><a href="formulario.html"><h1>Ingresar</h1></a></button>
-          <!--<input class="boton-submit caja-amarilla" type="submit" value="Ingresar"> -->
-        </form>
+        <select class="form-nombre caja-blanca" name="alumno" id="alumno">
+          <option>Seleccione Alumno</option>
+          <option>Carla Silva</option>
+          <option>Julio Rodriguez</option>
+          <option>Pedro Sanchez</option>
+        </select>
+        <textarea class="form-registro" id="observaciones" rows="10" placeholder="Observaciones"></textarea>
+        <div class="form-botones">
+          <button  class="boton-submit caja-amarilla" type="button"><a href="formulario.html"><h4>Volver</h4></a></button>
+          <button  class="boton-submit caja-amarilla" type="button"><a href="formulario.html"><h4>Guardar</h4></a></button>
+        </div>
       </section>
     </main>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

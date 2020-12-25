@@ -15,6 +15,8 @@ $padding: 5px;
 
 $azul: blue;
 $blanco: white;
+$negro: black;
+$amarillo: gold;
 
 //styles
 .caja-azul {
@@ -24,6 +26,22 @@ $blanco: white;
   padding: $padding;
 }
 
+.caja-blanca {
+  background: $blanco;
+  color: $azul;
+  text-align: center;
+  padding: $padding;
+  border: 2px $azul solid;
+}
+
+.caja-amarilla {
+  background: $amarillo;
+  color: $negro;
+  text-align: center;
+  padding: $padding;
+  border: 5px $negro solid;
+  border-radius: 50px;
+}
 //mobile
 
 :root {
@@ -33,6 +51,19 @@ $blanco: white;
   font-weight: $p-font-weight;
 }
 
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $negro;
+
+  &:hover {
+    color: $azul;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -40,6 +71,7 @@ h4,
 h5,
 h6 {
   font-weight: $p-font-weight * 7;
+  margin: 0;
 }
 
 h1 {
@@ -69,6 +101,7 @@ h6 {
 %flexcol {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 div {
@@ -97,26 +130,33 @@ body {
   display: flex;
   justify-content: center;
   height: 100vh;
+  min-height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   main {
     width: 80%;
     height: 100%;
 
-    .seccion-1 {
-      width: 100%;
+    section {
       height: 100%;
       margin: 5% 0;
-      justify-content: space-between;
+      justify-content: space-around;
 
-      .titulo {
+      //login
+
+      .login-titulo {
         justify-content: center;
         height: 40%;
-        width: 100%;
       }
 
-      .formulario {
+      .login-formulario {
         height: 55%;
-        width: 100%;
         justify-content: space-between;
 
         .campo {
@@ -127,6 +167,26 @@ body {
         .boton-submit {
           height: 30%;
           width: 100%;
+        }
+      }
+
+      //formulario
+
+      .form-nombre {
+        padding: $padding * 3;
+      }
+
+      .form-registro {
+        padding: $padding * 2;
+      }
+
+      .form-botones {
+        height: 10%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .boton-submit {
+          width: 45%;
         }
       }
     }
@@ -141,18 +201,25 @@ body {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 996px) {
   :root {
     font-size: $p-font-size * 2;
   }
 
   body {
+    max-height: 100vh;
+    min-height: 100vh;
+
     main {
       max-width: 800px;
 
-      .seccion-1 {
+      section {
         padding: $padding * 3;
         border: 2px $azul solid;
+
+        //formulario
+
+
       }
     }
   }

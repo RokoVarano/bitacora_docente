@@ -6,11 +6,41 @@
   padding: 5px;
 }
 
+.caja-blanca {
+  background: white;
+  color: blue;
+  text-align: center;
+  padding: 5px;
+  border: 2px blue solid;
+}
+
+.caja-amarilla {
+  background: gold;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border: 5px black solid;
+  border-radius: 50px;
+}
+
 :root {
   font-size: 15px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
 }
 
 h1,
@@ -20,6 +50,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  margin: 0;
 }
 
 h1 {
@@ -54,6 +85,7 @@ div, main, section, form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .spacer {
@@ -70,6 +102,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  min-height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body main {
@@ -77,41 +117,60 @@ body main {
   height: 100%;
 }
 
-body main .seccion-1 {
-  width: 100%;
+body main section {
   height: 100%;
   margin: 5% 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body main .seccion-1 .titulo {
+body main section .login-titulo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 40%;
-  width: 100%;
 }
 
-body main .seccion-1 .formulario {
+body main section .login-formulario {
   height: 55%;
-  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-body main .seccion-1 .formulario .campo {
+body main section .login-formulario .campo {
   height: 30%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-body main .seccion-1 .formulario .boton-submit {
+body main section .login-formulario .boton-submit {
   height: 30%;
   width: 100%;
+}
+
+body main section .form-nombre {
+  padding: 15px;
+}
+
+body main section .form-registro {
+  padding: 10px;
+}
+
+body main section .form-botones {
+  height: 10%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section .form-botones .boton-submit {
+  width: 45%;
 }
 
 @media screen and (min-height: 768px) {
@@ -120,14 +179,18 @@ body main .seccion-1 .formulario .boton-submit {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 996px) {
   :root {
     font-size: 30px;
+  }
+  body {
+    max-height: 100vh;
+    min-height: 100vh;
   }
   body main {
     max-width: 800px;
   }
-  body main .seccion-1 {
+  body main section {
     padding: 15px;
     border: 2px blue solid;
   }

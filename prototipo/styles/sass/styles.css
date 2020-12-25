@@ -1,24 +1,231 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-body {
-  font-size: 10px;
+.caja-azul {
+  background: blue;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.caja-blanca {
+  background: white;
+  color: blue;
+  text-align: center;
+  padding: 5px;
+  border: 2px blue solid;
+}
+
+.caja-amarilla {
+  background: gold;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border: 5px black solid;
+  border-radius: 50px;
+}
+
+:root {
+  font-size: 15px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  margin: 0;
-  padding: 0;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 12px;
-    font-weight: 200;
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+div, main, section, form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.spacer {
+  height: 5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 80vh;
+  min-height: 80vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+body main {
+  width: 80%;
+  height: 100%;
+}
+
+body main section {
+  height: 100%;
+  margin: 5% 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section .login-titulo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40%;
+}
+
+body main section .login-formulario {
+  height: 55%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section .login-formulario .campo {
+  height: 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main section .login-formulario .boton-submit {
+  height: 30%;
+  width: 100%;
+}
+
+body main section .form-nombre {
+  padding: 15px;
+}
+
+body main section .form-registro {
+  padding: 10px;
+}
+
+body main section .form-botones {
+  height: 10%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section .form-botones .boton-submit {
+  width: 45%;
+}
+
+body main .menu-section {
+  height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main .menu-section .menu-buscar {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main .menu-section .menu-buscar .item {
+  margin-bottom: 15px;
+}
+
+body main .menu-section .menu-botones {
+  height: 10%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .menu-section .menu-botones button {
+  width: 45%;
+}
+
+@media screen and (min-height: 768px) {
+  :root {
+    font-size: 30px;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 996px) {
   body {
-    font-size: 14px;
-    font-weight: 300;
+    max-height: 100vh;
+    min-height: 100vh;
+  }
+  body main {
+    max-width: 800px;
+  }
+  body main section {
+    padding: 15px;
+    border: 2px blue solid;
   }
 }
 /*# sourceMappingURL=styles.css.map */

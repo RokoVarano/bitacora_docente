@@ -1,7 +1,7 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-$p-font-size: 10px;
+$p-font-size: 15px;
 $p-line-height: 1.5;
 $p-font-family: 'Roboto', sans-serif;
 $p-font-weight: 100;
@@ -13,32 +13,232 @@ $padding: 5px;
 
 //colors
 
+$azul: blue;
+$blanco: white;
+$negro: black;
+$amarillo: gold;
+
+//styles
+.caja-azul {
+  background: $azul;
+  color: $blanco;
+  text-align: center;
+  padding: $padding;
+}
+
+.caja-blanca {
+  background: $blanco;
+  color: $azul;
+  text-align: center;
+  padding: $padding;
+  border: 2px $azul solid;
+}
+
+.caja-amarilla {
+  background: $amarillo;
+  color: $negro;
+  text-align: center;
+  padding: $padding;
+  border: 5px $negro solid;
+  border-radius: 50px;
+}
 //mobile
 
-body {
+:root {
   font-size: $p-font-size;
   line-height: $p-line-height;
   font-family: $p-font-family;
   font-weight: $p-font-weight;
-
-  margin: 0;
-  padding: 0;
 }
 
-//tablet
+p {
+  margin: 0;
+}
 
-@media screen and (min-width: 768px) {
-  body {
-    font-size: $p-font-size * 1.2;
-    font-weight: $p-font-weight * 2;
+a {
+  text-decoration: none;
+  color: $negro;
+
+  &:hover {
+    color: $azul;
   }
 }
 
-//desktop
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $p-font-weight * 7;
+  margin: 0;
+}
 
-@media screen and (min-width: 992px) {
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+%flexcol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+div {
+  @extend %flexcol;
+}
+
+main {
+  @extend %flexcol;
+}
+
+section {
+  @extend %flexcol;
+}
+
+form {
+  @extend %flexcol;
+}
+
+.spacer {
+  height: 5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 80vh;
+  min-height: 80vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  main {
+    width: 80%;
+    height: 100%;
+
+    section {
+      height: 100%;
+      margin: 5% 0;
+      justify-content: space-between;
+
+      //login
+
+      .login-titulo {
+        justify-content: center;
+        height: 40%;
+      }
+
+      .login-formulario {
+        height: 55%;
+        justify-content: space-between;
+
+        .campo {
+          height: 30%;
+          justify-content: center;
+        }
+
+        .boton-submit {
+          height: 30%;
+          width: 100%;
+        }
+      }
+
+      //formulario
+
+      .form-nombre {
+        padding: $padding * 3;
+      }
+
+      .form-registro {
+        padding: $padding * 2;
+      }
+
+      .form-botones {
+        height: 10%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .boton-submit {
+          width: 45%;
+        }
+      }
+    }
+
+    //menu
+
+    .menu-section {
+      height: auto;
+      justify-content: flex-start;
+
+      .menu-buscar {
+        justify-content: flex-start;
+
+        .item {
+          margin-bottom: $margin *3;
+        }
+      }
+
+      .menu-botones {
+        height: 10%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        button {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+//adjust font size
+
+@media screen and (min-height: 768px) {
+  :root {
+    font-size: $p-font-size * 2;
+  }
+}
+
+@media screen and (min-width: 996px) {
   body {
-    font-size: $p-font-size * 1.4;
-    font-weight: $p-font-weight * 3;
+    max-height: 100vh;
+    min-height: 100vh;
+
+    main {
+      max-width: 800px;
+
+      section {
+        padding: $padding * 3;
+        border: 2px $azul solid;
+      }
+    }
   }
 }

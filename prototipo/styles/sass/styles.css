@@ -106,18 +106,27 @@ body main .seccion-1 .formulario .campo {
           justify-content: center;
 }
 
-body main .seccion-1 .formulario .campo input {
-  height: 100%;
-}
-
 body main .seccion-1 .formulario .boton-submit {
   height: 30%;
   width: 100%;
 }
 
-@media screen and (min-height: 720px) {
+@media screen and (min-height: 768px) {
   :root {
     font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    font-size: 30px;
+  }
+  body main {
+    max-width: 800px;
+  }
+  body main .seccion-1 {
+    padding: 15px;
+    border: 2px blue solid;
   }
 }
 /*# sourceMappingURL=styles.css.map */

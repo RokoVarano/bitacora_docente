@@ -22,8 +22,13 @@
           <h1>Bitacora Docente</h1>
           <h5>Prototipo</h5>
         </div>
-        <form class="login-formulario" action="/action_page.php" method="get">
-          <div class="campo">
+        <form class="login-formulario" action="/login/" method="post">
+          {% csrf_token %}
+          {{ form.as_table }}
+          <input type="submit" value="Submit">
+
+
+          <!--<div class="campo">
             <label class="caja-azul" for="usuario">Usuario</label>
             <input type="text" id="usuario" name="usuario" title="Usuario" placeholder="Usuario">
           </div>
@@ -31,7 +36,7 @@
             <label class="caja-azul" for="clave">Clave</label>
             <input type="text" id="clave" name="clave" title="Clave" placeholder="Clave">   
           </div>
-          <a class="submit caja-amarilla" href="login/identificar_user"><h1>Ingresar</h1></a>
+          <a class="submit caja-amarilla" href="login/identificar_user"><h1>Ingresar</h1></a>-->
           <!--<input class="boton-submit caja-amarilla" type="submit" value="Ingresar"> -->
         </form>
       </section>
